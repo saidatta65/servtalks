@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServTalks - From Placement to Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Controls -->
+    <div class="nav-controls">
+        <button class="nav-btn prev-btn" onclick="previousSlide()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+        <div class="slide-counter">
+            <span id="currentSlide">1</span> / <span id="totalSlides">13</span>
+        </div>
+        <button class="nav-btn next-btn" onclick="nextSlide()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Slide Indicators -->
+    <div class="slide-indicators">
+        <span class="indicator active" onclick="goToSlide(0)"></span>
+        <span class="indicator" onclick="goToSlide(1)"></span>
+        <span class="indicator" onclick="goToSlide(2)"></span>
+        <span class="indicator" onclick="goToSlide(3)"></span>
+        <span class="indicator" onclick="goToSlide(4)"></span>
+        <span class="indicator" onclick="goToSlide(5)"></span>
+        <span class="indicator" onclick="goToSlide(6)"></span>
+        <span class="indicator" onclick="goToSlide(7)"></span>
+        <span class="indicator" onclick="goToSlide(8)"></span>
+        <span class="indicator" onclick="goToSlide(9)"></span>
+        <span class="indicator" onclick="goToSlide(10)"></span>
+        <span class="indicator" onclick="goToSlide(11)"></span>
+        <span class="indicator" onclick="goToSlide(12)"></span>
+    </div>
+
+    <!-- Slides Container -->
+    <div class="slides-container">
+        
+        <!-- Slide 1: Title -->
+        <div class="slide active" id="slide-1">
+            <div class="particles" id="particles-1"></div>
+            
+            <div class="geometric-shapes">
+                <div class="shape circle" style="width: 200px; height: 200px; top: 10%; left: 10%;"></div>
+                <div class="shape" style="width: 150px; height: 150px; top: 60%; right: 15%; transform: rotate(45deg);"></div>
+                <div class="shape circle" style="width: 100px; height: 100px; bottom: 20%; left: 20%;"></div>
+            </div>
+
+            <div class="content">
+                <div class="logo-container">
+                    <img src="/images/desktop-dark.png" alt="ServCrust Logo" class="img-fluid">
+                </div>
+
+                <div class="event-badge">
+                    <h3>ServTalks - Session 01</h3>
+                </div>
+
+                <div class="main-title">
+                    <h1>From <span class="highlight">Placement</span> to <span class="highlight">Delivery</span></h1>
+                </div>
+
+                <div class="subtitle">
+                    How Frontend Enables Business Teams
+                </div>
+
+                <div class="speaker-info">
+                    <div class="speaker-avatar">NR</div>
+                    <div class="speaker-details">
+                        <h3>Narla Ruthik</h3>
+                        <p>Frontend Developer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="scroll-indicator" onclick="nextSlide()">
+                <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </div> -->
+        </div>
+
+        <!-- Slide 2: Why This Topic Matters -->
+        <div class="slide" id="slide-2">
+            <div class="particles" id="particles-2"></div>
+            
+            <div class="content">
+                <div class="slide-header">
+                    <div class="slide-number">02</div>
+                    <h2 class="slide-title">Why This Topic Matters</h2>
+                </div>
+
+                <div class="content-grid">
+                    <div class="icon-card">
+                        <div class="icon-circle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Beyond Screens</h3>
+                        <p>Frontend is more than just colors and buttons</p>
+                    </div>
+
+                    <div class="icon-card">
+                        <div class="icon-circle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h3>Empowering Teams</h3>
+                        <p>Making complex functionality usable for everyone</p>
+                    </div>
+
+                    <div class="icon-card">
+                        <div class="icon-circle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h3>Real Impact</h3>
+                        <p>Measurable business value through collaboration</p>
+                    </div>
+                </div>
+
+                <div class="quote-box">
+                    <div class="quote-icon">"</div>
+                    <p>Frontend takes complex Backend functionality and makes it <strong>usable, accessible, and efficient</strong> for every business team</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Understanding Our Domain -->
+        <div class="slide" id="slide-3">
+            <div class="particles" id="particles-3"></div>
+            
+            <div class="content">
+                <div class="slide-header">
+                    <div class="slide-number">03</div>
+                    <h2 class="slide-title">Understanding Our Domain</h2>
+                </div>
+
+                <div class="domain-intro">
+                    <div class="domain-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h3>ServCrust: The Amazon for Construction Materials</h3>
+                    <p>E-commerce platform for stone aggregates, bricks, cement, and more</p>
+                </div>
+
+                <div class="teams-flow">
+                    <div class="team-card">
+                        <div class="team-number">1</div>
+                        <h4>Sales</h4>
+                        <p>Takes client requests</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    
+                    <div class="team-card">
+                        <div class="team-number">2</div>
+                        <h4>Operations</h4>
+                        <p>Coordinates logistics</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    
+                    <div class="team-card">
+                        <div class="team-number">3</div>
+                        <h4>Supply Partners</h4>
+                        <p>Schedule deliveries</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    
+                    <div class="team-card">
+                        <div class="team-number">4</div>
+                        <h4>Finance</h4>
+                        <p>Verifies payments</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    
+                    <div class="team-card">
+                        <div class="team-number">5</div>
+                        <h4>Management</h4>
+                        <p>Tracks performance</p>
+                    </div>
+                </div>
+
+                <div class="frontend-role">
+                    <p><strong>Frontend's Role:</strong> Build interfaces that make these steps <span class="highlight-text">actionable, visible, and error-free</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: The Customer Journey -->
+        <div class="slide" id="slide-4">
+            <div class="particles" id="particles-4"></div>
+            
+            <div class="content">
+                <div class="slide-header">
+                    <div class="slide-number">04</div>
+                    <h2 class="slide-title">The Customer Journey</h2>
+                </div>
+
+                <div class="journey-container">
+                    <div class="journey-step">
+                        <div class="step-icon phone">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </div>
+                        <div class="step-content">
+                            <h3>Customer Initiates</h3>
+                            <p>Sends "Hi" to ServCrust</p>
+                        </div>
+                    </div>
+
+                    <div class="journey-arrow">↓</div>
+
+                    <div class="journey-step">
+                        <div class="step-icon backend">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <div class="step-content">
+                            <h3>Backend Processes</h3>
+                            <p>Creates order entry & stores data in OMS</p>
+                        </div>
+                    </div>
+
+                    <div class="journey-arrow">↓</div>
+
+                    <div class="journey-step highlight-step">
+                        <div class="step-icon frontend">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="3" y1="9" x2="21" y2="9"/>
+                                <line x1="9" y1="21" x2="9" y2="9"/>
+                            </svg>
+                        </div>
+                        <div class="step-content">
+                            <h3>Frontend Displays</h3>
+                            <p>Makes data visible & actionable for teams</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collaboration-note">
+                    <div class="collab-icon">🤝</div>
+                    <p>This collaboration between Backend and Frontend is <strong>absolutely key</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Frontend and Backend Together -->
+        <div class="slide" id="slide-5">
+            <div class="particles" id="particles-5"></div>
+            
+            <div class="content">
+                <div class="slide-header">
+                    <div class="slide-number">05</div>
+                    <h2 class="slide-title">Frontend & Backend Together</h2>
+                </div>
+
+                <div class="comparison-container">
+                    <div class="comparison-card backend-card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                            </svg>
+                        </div>
+                        <h3>Backend</h3>
+                        <h4>The Engine</h4>
+                        <ul>
+                            <li>Core business logic</li>
+                            <li>Data management</li>
+                            <li>Security</li>
+                            <li>Heavy data lifting</li>
+                        </ul>
+                    </div>
+
+                    <div class="plus-sign">+</div>
+
+                    <div class="comparison-card frontend-card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="9" y1="9" x2="15" y2="9"/>
+                                <line x1="9" y1="15" x2="15" y2="15"/>
+                            </svg>
+                        </div>
+                        <h3>Frontend</h3>
+                        <h4>The Dashboard</h4>
+                        <ul>
+                            <li>User interfaces</li>
+                            <li>Data visualization</li>
+                            <li>Accessibility</li>
+                            <li>User experience</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mission-statement">
+                    <div class="statement-icon">🎯</div>
+                    <h3>Our Core Responsibility</h3>
+                    <p>Ensure that powerful Backend logic becomes <strong>immediately usable and visible</strong> for business teams across ServCrust</p>
+                </div>
+
+                <div class="teamwork-badge">
+                    <p>🌟 Both are critical for success 🌟</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Requirement Flow -->
+        <div class="slide" id="slide-6">
+            <div class="particles" id="particles-6"></div>
+            
+            <div class="content">
+                <div class="slide-header">
+                    <div class="slide-number">06</div>
+                    <h2 class="slide-title">Requirement Flow</h2>
+                </div>
+
+                <div class="workflow-diagram">
+                    <div class="workflow-step step-1">
+                        <div class="step-badge">Step 1</div>
+                        <div class="step-box">
+                            <div class="step-icon-small">📋</div>
+                            <h3>BA Team</h3>
+                            <p>Collects requirements & creates Figma designs</p>
+                        </div>
+                    </div>
+
+                    <div class="workflow-connector">↓</div>
+
+                    <div class="workflow-step step-2">
+                        <div class="step-badge">Step 2</div>
+                        <div class="step-box">
+                            <div class="step-icon-small">👥</div>
+                            <h3>Group Discussion Sprint</h3>
+                            <p>Frontend & Backend walk through screens together</p>
+                        </div>
+                    </div>
+
+                    <div class="workflow-connector">↓</div>
+
+                    <div class="workflow-step step-3">
+                        <div class="step-badge">Step 3</div>
+                        <div class="step-box collaboration-box">
+                            <div class="collab-items">
+                                <div class="collab-item">
+                                    <div class="step-icon-small">💻</div>
+                                    <span>Frontend Dev</span>
+                                </div>
+                                <div class="collab-plus">+</div>
+                                <div class="collab-item">
+                                    <div class="step-icon-small">⚙️</div>
+                                    <span>Backend Dev</span>
+                                </div>
+                            </div>
+                            <p>Team Lead assigns tasks</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-insight">
+                    <span class="insight-icon">💡</span>
+                    <p>Not just coding—it's <strong>team alignment</strong> and <strong>user-focused design</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Development Lifecycle -->
+        <div class="slide" id="slide-7">
+            <div class="particles" id="particles-7"></div>
+            
+            <div class="content">
+                <div class="slide-header">
+                    <div class="slide-number">07</div>
+                    <h2 class="slide-title">Development Lifecycle</h2>
+                </div>
+
+                <div class="dev-cycle-container">
+                    <div class="cycle-center">
+                        <div class="cycle-icon">🔄</div>
+                        <h3>Daily Standup</h3>
+                    </div>
+
+                    <div class="cycle-items">
+                        <div class="cycle-card card-1">
+                            <div class="card-header">
+                                <div class="card-icon">📝</div>
+                                <h4>Requirements</h4>
+                            </div>
+                            <p>Understanding what needs to be built</p>
+                        </div>
+
+                        <div class="cycle-card card-2">
+                            <div class="card-header">
+                                <div class="card-icon">🔌</div>
+                                <h4>API Integration</h4>
+                            </div>
+                            <p>Backend APIs ready before or after UI</p>
+                        </div>
+
+                        <div class="cycle-card card-3">
+                            <div class="card-header">
+                                <div class="card-icon">🎨</div>
+                                <h4>UI Development</h4>
+                            </div>
+                            <p>Building screens with proper data display</p>
+                        </div>
+
+                        <div class="cycle-card card-4">
+                            <div class="card-header">
+                                <div class="card-icon">🤝</div>
+                                <h4>Coordination</h4>
+                            </div>
+                            <p>Close collaboration with Backend team</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-statement">
+                    <p>Screens that deliver <span class="highlight-text">real business value</span> with <span class="highlight-text">accurate, robust logic</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Quality Assurance & Testing -->
+        <div class="slide" id="slide-8">
+            <div class="particles" id="particles-8"></div>
+            
+            <div class="content">
+                <div class="slide-header">
+                    <div class="slide-number">08</div>
+                    <h2 class="slide-title">Quality Assurance & Testing</h2>
+                </div>
+
+                <div class="testing-flow">
+                    <div class="testing-phase phase-1">
+                        <div class="phase-header">
+                            <div class="phase-number">1</div>
+                            <h3>Developer Testing</h3>
+                        </div>
+                        <div class="phase-content">
+                            <ul class="testing-list">
+                                <li>UI Behavior</li>
+                                <li>Input Validations</li>
+                                <li>Edge Cases</li>
+                            </ul>
+                        </div>
+                        <div class="tester-badge dev-badge">Frontend & Backend Devs</div>
+                    </div>
+
+                    <div class="testing-arrow">→</div>
+
+                    <div class="testing-phase phase-2">
+                        <div class="phase-header">
+                            <div class="phase-number">2</div>
+                            <h3>QA Testing</h3>
+                        </div>
+                        <div class="phase-content">
+                            <ul class="testing-list">
+                                <li>Manual Testing</li>
+                                <li>Automation Testing</li>
+                                <li>Bug Reporting</li>
+                            </ul>
+                        </div>
+                        <div class="tester-badge qa-badge">QA Team</div>
+                    </div>
+
+                    <div class="testing-arrow">→</div>
+
+                    <div class="testing-phase phase-3">
+                        <div class="phase-header">
+                            <div class="phase-number">3</div>
+                            <h3>Bug Fixing</h3>
+                        </div>
+                        <div class="phase-content">
+                            <div class="bug-fix-split">
+                                <div class="fix-item">
+                                    <span class="fix-icon">⚙️</span>
+                                    <p>Backend: API accuracy</p>
+                                </div>
+                                <div class="fix-item">
+                                    <span class="fix-icon">🎨</span>
+                                    <p>Frontend: Display accuracy</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tester-badge fix-badge">Collaborative Fix</div>
+                    </div>
+                </div>
+
+                <div class="quality-badge">
+                    <span class="badge-icon">🛡️</span>
+                    <p>QA Team: Our <strong>second line of defense</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Deployment Lifecycle -->
+        <div class="slide" id="slide-9">
+            <div class="particles" id="particles-9"></div>
+            
+            <div class="content">
+                <div class="slide-header">
+                    <div class="slide-number">09</div>
+                    <h2 class="slide-title">Deployment Lifecycle</h2>
+                </div>
+
+                <div class="deployment-pipeline">
+                    <div class="git-section">
+                        <div class="git-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </div>
+                        <h3>Git Push</h3>
+                        <p>Code committed by developers</p>
+                    </div>
+
+                    <div class="pipeline-arrow">↓</div>
+
+                    <div class="environments-container">
+                        <div class="env-item env-local">
+                            <div class="env-dot"></div>
+                            <span>Local</span>
+                        </div>
+                        <div class="env-arrow">→</div>
+                        <div class="env-item env-prestaging">
+                            <div class="env-dot"></div>
+                            <span>Prestaging</span>
+                        </div>
+                        <div class="env-arrow">→</div>
+                        <div class="env-item env-staging">
+                            <div class="env-dot"></div>
+                            <span>Staging</span>
+                        </div>
+                        <div class="env-arrow">→</div>
+                        <div class="env-item env-preprod">
+                            <div class="env-dot"></div>
+                            <span>Preprod</span>
+                        </div>
+                        <div class="env-arrow">→</div>
+                        <div class="env-item env-production">
+                            <div class="env-dot"></div>
+                            <span>Production</span>
+                        </div>
+                    </div>
+
+                    <div class="pipeline-arrow">↓</div>
+
+                    <div class="devops-section">
+                        <div class="devops-icon">🚀</div>
+                        <h3>DevOps Pipeline</h3>
+                        <p>Automated deployment handled by DevOps team</p>
+                    </div>
+                </div>
+
+                <div class="deployment-roles">
+                    <div class="role-card">
+                        <span class="role-icon">⚙️</span>
+                        <h4>Backend</h4>
+                        <p>Stable APIs in each environment</p>
+                    </div>
+                    <div class="role-divider">+</div>
+                    <div class="role-card">
+                        <span class="role-icon">🎨</span>
+                        <h4>Frontend</h4>
+                        <p>Screens render correctly everywhere</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <!-- Slide 10: Back to Business -->
+        <div class="slide" id="slide-10">
+            <div class="particles" id="particles-10"></div>
+            
+            <div class="content">
+                <div class="slide-header">
+                    <div class="slide-number">10</div>
+                    <h2 class="slide-title">Back to Business</h2>
+                </div>
+
+                <div class="refocus-container">
+                    <div class="refocus-icon">💼</div>
+                    <h3 class="refocus-title">Frontend's Direct Impact</h3>
+                    <p class="refocus-subtitle">Click on any department to explore how we empower them</p>
+                </div>
+
+                <div class="departments-preview">
+                    <div class="dept-preview-card" onclick="openDepartmentModal('management')">
+                        <div class="dept-icon">📊</div>
+                        <h4>Management</h4>
+                        <p>Strategic dashboards & insights</p>
+                        <div class="click-hint">Click to explore →</div>
+                    </div>
+
+                    <div class="dept-preview-card" onclick="openDepartmentModal('operations')">
+                        <div class="dept-icon">⚙️</div>
+                        <h4>Operations</h4>
+                        <p>Day-to-day workflow tools</p>
+                        <div class="click-hint">Click to explore →</div>
+                    </div>
+
+                    <div class="dept-preview-card" onclick="openDepartmentModal('finance')">
+                        <div class="dept-icon">💰</div>
+                        <h4>Finance</h4>
+                        <p>Reports & pricing tools</p>
+                        <div class="click-hint">Click to explore →</div>
+                    </div>
+
+                    <div class="dept-preview-card" onclick="openDepartmentModal('sales')">
+                        <div class="dept-icon">🎯</div>
+                        <h4>Sales</h4>
+                        <p>SMART App & lead tracking</p>
+                        <div class="click-hint">Click to explore →</div>
+                    </div>
+                </div>
+
+                <div class="interaction-tip">
+                    <span class="tip-icon">💡</span>
+                    <p>Interactive Experience - Click any card above</p>
+                </div>
+            </div>
+        </div>
+
+<!-- Slide 11: Challenges & Reality -->
+        <div class="slide" id="slide-11">
+            <div class="particles" id="particles-11"></div>
+            
+            <div class="content">
+                <div class="slide-header">
+                    <div class="slide-number">11</div>
+                    <h2 class="slide-title">Challenges & Reality</h2>
+                </div>
+
+                <div class="challenge-intro">
+                    <div class="challenge-icon">💪</div>
+                    <p>Being a developer, the biggest challenge is the need for <strong>constant learning every day</strong></p>
+                </div>
+
+                <div class="challenges-grid">
+                    <div class="challenge-card">
+                        <div class="challenge-emoji">🔄</div>
+                        <h3>API Variations</h3>
+                        <p>Understanding deep variations of API responses</p>
+                    </div>
+
+                    <div class="challenge-card">
+                        <div class="challenge-emoji">🎨</div>
+                        <h3>Design Mastery</h3>
+                        <p>Mastering the Figma flows</p>
+                    </div>
+
+                    <div class="challenge-card">
+                        <div class="challenge-emoji">🎯</div>
+                        <h3>Business Impact</h3>
+                        <p>Knowing how a single screen impacts multiple teams</p>
+                    </div>
+                </div>
+
+                <div class="real-example">
+                    <div class="example-header">
+                        <span class="example-icon">💡</span>
+                        <h3>Real-Life Example</h3>
+                    </div>
+                    <div class="example-content">
+                        <p>One day, we realized the <strong>Finance team couldn't see a critical field</strong> they needed for auditing.</p>
+                        <div class="solution-flow">
+                            <div class="solution-step">
+                                <span class="step-dot">1</span>
+                                <p>Backend adjusted the API</p>
+                            </div>
+                            <span class="flow-arrow">→</span>
+                            <div class="solution-step">
+                                <span class="step-dot">2</span>
+                                <p>Frontend updated display</p>
+                            </div>
+                            <span class="flow-arrow">→</span>
+                            <div class="solution-step">
+                                <span class="step-dot">3</span>
+                                <p>QA verified</p>
+                            </div>
+                            <span class="flow-arrow">→</span>
+                            <div class="solution-step">
+                                <span class="step-dot">4</span>
+                                <p>Production ready!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="learning-cycle">
+                    <h3>The Continuous Cycle</h3>
+                    <div class="cycle-flow">
+                        <span class="cycle-item">Requirement</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Design</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Implementation</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Testing</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Delivery</span>
+                        <span class="cycle-arrow">→</span>
+                        <span class="cycle-item">Feedback</span>
+                        <span class="cycle-arrow">🔄</span>
+                    </div>
+                </div>
+
+                <div class="key-learning">
+                    <p><strong>Key Lesson:</strong> Team collaboration is as important as coding skills 🤝</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12: Future Improvements -->
+        <div class="slide" id="slide-12">
+            <div class="particles" id="particles-12"></div>
+            
+            <div class="content">
+                <div class="slide-header">
+                    <div class="slide-number">12</div>
+                    <h2 class="slide-title">Future Improvements</h2>
+                </div>
+
+                <div class="future-intro">
+                    <div class="future-icon">🚀</div>
+                    <h3>What's Next on Our Roadmap</h3>
+                    <p>Exciting updates from our BA team</p>
+                </div>
+
+                <div class="roadmap-section">
+                    <div class="roadmap-category">
+                        <div class="category-header">
+                            <span class="category-icon">📊</span>
+                            <h3>Internal Pages</h3>
+                        </div>
+                        <div class="roadmap-items">
+                            <div class="roadmap-item">
+                                <span class="item-bullet">▸</span>
+                                <p>Digital Marketing Dashboards</p>
+                            </div>
+                            <div class="roadmap-item">
+                                <span class="item-bullet">▸</span>
+                                <p>EPC Workflow System</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-category">
+                        <div class="category-header">
+                            <span class="category-icon">🏪</span>
+                            <h3>Marketplace Features</h3>
+                        </div>
+                        <div class="roadmap-items">
+                            <div class="roadmap-item">
+                                <span class="item-bullet">▸</span>
+                                <p>Selling/Renting OEM's</p>
+                            </div>
+                            <div class="roadmap-item">
+                                <span class="item-bullet">▸</span>
+                                <p>Selling/Collecting Scraps</p>
+                            </div>
+                            <div class="roadmap-item">
+                                <span class="item-bullet">▸</span>
+                                <p>Value Creation from Waste</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="roadmap-category">
+                        <div class="category-header">
+                            <span class="category-icon">🔗</span>
+                            <h3>Third-Party Integrations</h3>
+                        </div>
+                        <div class="integration-logos">
+                            <div class="integration-badge">ONDC</div>
+                            <div class="integration-badge">Zoho</div>
+                            <div class="integration-badge">Tally</div>
+                            <div class="integration-badge">And More...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="future-promise">
+                    <div class="promise-icon">✨</div>
+                    <p>These projects promise to make ServCrust <strong>even more powerful and efficient</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 13: Acknowledgments & Q&A -->
+        <div class="slide" id="slide-13">
+            <div class="particles" id="particles-13"></div>
+            
+            <div class="content">
+                <div class="slide-header">
+                    <div class="slide-number">13</div>
+                    <h2 class="slide-title">Thank You</h2>
+                </div>
+
+                <div class="thank-you-content">
+                    <div class="gratitude-icon">🙏</div>
+                    <h3>Sincere Gratitude</h3>
+                    <p class="gratitude-text">I hope this gave you a better perspective on how the Frontend team functions as the vital link between our robust Backend logic and your daily business efficiency.</p>
+                </div>
+
+                <div class="acknowledgments">
+                    <div class="ack-card">
+                        <div class="ack-icon">👥</div>
+                        <h4>Team Members & Leaders</h4>
+                        <p>Your guidance and vision are crucial for every feature we deliver</p>
+                    </div>
+
+                    <div class="ack-card">
+                        <div class="ack-icon">🤝</div>
+                        <h4>Supporting Colleagues</h4>
+                        <p>Thank you for helping collect insights for this presentation</p>
+                    </div>
+
+                    <div class="ack-card">
+                        <div class="ack-icon">💼</div>
+                        <h4>All Departments</h4>
+                        <p>Your collaboration makes our work meaningful</p>
+                    </div>
+                </div>
+
+                <div class="qa-section">
+                    <div class="qa-icon">💬</div>
+                    <h3>Questions & Answers</h3>
+                    <p>Let's open the floor for questions about our process, tools, or future improvements</p>
+                </div>
+
+                <div class="closing-message">
+                    <div class="closing-quote">
+                        <span class="quote-mark">"</span>
+                        <p>Frontend's success is your success. By continuing to work together, we ensure that every piece of powerful code is delivered in a way that is <strong>effortless and efficient</strong></p>
+                    </div>
+                    <div class="final-words">
+                        <p>Have a great day and let's keep building! 🚀</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Department Details Modal -->
+        <div class="department-modal" id="departmentModal">
+            <div class="modal-overlay" onclick="closeDepartmentModal()"></div>
+            <div class="modal-content">
+                <button class="modal-close" onclick="closeDepartmentModal()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+                
+                <div class="modal-body" id="modalBody">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
